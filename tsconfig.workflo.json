@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "target": "ES6",
+        "module": "commonjs"
+    },
+    "include": [
+        "system_test/src/**/*"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}
