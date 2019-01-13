@@ -1,11 +1,11 @@
-import { PageElementStore } from '../stores'
+import { PageNodeStore } from '../stores'
 import { Page, IPageOpts } from './Page'
 
-export interface IBaseFragmentPageOpts<Store extends PageElementStore> extends IPageOpts<Store> {
+export interface IBaseFragmentPageOpts<Store extends PageNodeStore> extends IPageOpts<Store> {
   containerSelector: string
 }
 
-export class BaseFragment<Store extends PageElementStore> extends Page<Store> {
+export class BaseFragment<Store extends PageNodeStore> extends Page<Store> {
 
   protected _containerSelector: string
 

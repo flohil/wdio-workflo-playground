@@ -1,8 +1,8 @@
-import { PageElementStore } from './PageElementStore'
+import { PageNodeStore } from './PageNodeStore'
 
-export * from './PageElementStore'
+export * from './PageNodeStore'
 
-export const pageElement = new PageElementStore()
+export const pageElement = new PageNodeStore()
 
 import { DemoStore } from './DemoStore'
 

@@ -2,10 +2,10 @@ import { Page, IPageOpts } from './Page'
 import { stores } from '?/page_objects'
 
 export interface IBasePageOpts<
-  Store extends stores.PageElementStore
+  Store extends stores.PageNodeStore
 > extends IPageOpts<Store> {}
 
-export class NpmJsPage extends Page<stores.PageElementStore> {
+export class NpmJsPage extends Page<stores.PageNodeStore> {
 
   constructor() {
     super({store: stores.pageElement})

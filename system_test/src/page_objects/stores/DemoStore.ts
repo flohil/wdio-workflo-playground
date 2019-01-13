@@ -1,11 +1,11 @@
 import { pageObjects as core } from 'wdio-workflo'
 
-import { PageElementStore } from './PageElementStore';
+import { PageNodeStore } from './PageNodeStore';
 import { Dropdown, IDropdownOpts, Checkbox, ICheckboxOpts, IDemoInputOpts, DemoInput } from '../page_elements'
 
 type CheckboxOpts<Store extends DemoStore> = Pick<ICheckboxOpts<Store>, Workflo.Store.ElementPublicKeys>
 
-export class DemoStore extends PageElementStore {
+export class DemoStore extends PageNodeStore {
   Input(
     selector: Workflo.XPath,
     options?: Pick<IDemoInputOpts<this>, 'timeout' | 'waitType'>
@@ -114,7 +114,7 @@ export class DemoStore extends PageElementStore {
 // test if proxying works with IGetValue
 
 // class NumberInput<
-//   Store extends pageObjects.stores.PageElementStore,
+//   Store extends pageObjects.stores.PageNodeStore,
 // > extends pageObjects.elements.ValuePageElement<
 //   Store, number
 // > {
@@ -135,7 +135,7 @@ export class DemoStore extends PageElementStore {
 // }
 
 // class NumberInputCurrently<
-//   Store extends pageObjects.stores.PageElementStore,
+//   Store extends pageObjects.stores.PageNodeStore,
 //   PageElementType extends NumberInput<Store>
 // > extends pageObjects.elements.ValuePageElementCurrently<Store, PageElementType, number> {
 //   getValue(): number {
@@ -151,7 +151,7 @@ export class DemoStore extends PageElementStore {
 
 // // achieved mapping type to input value!!!
 
-// class InputStore extends pageObjects.stores.PageElementStore {
+// class InputStore extends pageObjects.stores.PageNodeStore {
 //   Input(
 //     selector: Workflo.XPath,
 //     options?: Pick<IInputOpts<this>, Workflo.Store.ElementPublicKeys>

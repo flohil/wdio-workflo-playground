@@ -1,11 +1,11 @@
-import { PageElementStore } from '../stores'
+import { PageNodeStore } from '../stores'
 import { ValuePageElement, ValuePageElementCurrently, IValuePageElementOpts } from './ValuePageElement'
 
 export interface IInputOpts<
- Store extends PageElementStore
+ Store extends PageNodeStore
 > extends IValuePageElementOpts<Store> {}
 
-export class Input<Store extends PageElementStore> extends ValuePageElement<Store, string> {
+export class Input<Store extends PageNodeStore> extends ValuePageElement<Store, string> {
 
   constructor(selector: string, opts: IInputOpts<Store>) {
     super(selector, opts)
@@ -21,7 +21,7 @@ export class Input<Store extends PageElementStore> extends ValuePageElement<Stor
 }
 
 export class InputCurrently<
-  Store extends PageElementStore,
+  Store extends PageNodeStore,
   PageElementType extends Input<Store>
 > extends ValuePageElementCurrently<Store, PageElementType, string> {
 

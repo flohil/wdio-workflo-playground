@@ -1,12 +1,12 @@
-import { PageElementStore } from '../stores'
+import { PageNodeStore } from '../stores'
 import { Page, IPageOpts } from './Page'
 
-export interface IBasePageOpts<Store extends PageElementStore> extends IPageOpts<Store> {
+export interface IBasePageOpts<Store extends PageNodeStore> extends IPageOpts<Store> {
   basePath: string
 }
 
 export class BasePage<
-  Store extends PageElementStore
+  Store extends PageNodeStore
 > extends Page<
   Store,
   {path?: string}

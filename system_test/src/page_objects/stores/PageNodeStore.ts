@@ -2,10 +2,10 @@ import { pageObjects as core } from 'wdio-workflo'
 import { IPageElementOpts, PageElement, IInputOpts, Input } from '../page_elements';
 
 /**
- * This class can be used to extend or customize the functionality provided by wdio-workflo's PageElementStore class.
- * It is supposed to serve as the base PageElementStore class throughout your project.
+ * This class can be used to extend or customize the functionality provided by wdio-workflo's PageNodeStore class.
+ * It is supposed to serve as the base PageNodeStore class throughout your project.
  */
-export class PageElementStore extends core.stores.PageElementStore {
+export class PageNodeStore extends core.stores.PageNodeStore {
 
 // ELEMENTS
 

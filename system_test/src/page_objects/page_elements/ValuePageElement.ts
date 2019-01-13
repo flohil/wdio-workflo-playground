@@ -1,6 +1,6 @@
 import { pageObjects as core, helpers } from 'wdio-workflo'
 
-import { PageElementStore } from '../stores'
+import { PageNodeStore } from '../stores'
 import {
   PageElement,
   PageElementCurrently,
@@ -14,7 +14,7 @@ import {
  * It is supposed to serve as the base IValuePageElementOpts interface throughout your project.
  */
 export interface IValuePageElementOpts<
-  Store extends PageElementStore
+  Store extends PageNodeStore
 > extends core.elements.IValuePageElementOpts<Store>, IPageElementOpts<Store> {}
 
 /**
@@ -22,7 +22,7 @@ export interface IValuePageElementOpts<
  * It is supposed to serve as the base ValuePageElement class throughout your project.
  */
 export abstract class ValuePageElement<
-  Store extends PageElementStore,
+  Store extends PageNodeStore,
   ValueType
 > extends PageElement<Store>
 implements core.elements.ValuePageElement<Store, ValueType> {
@@ -65,7 +65,7 @@ implements core.elements.ValuePageElement<Store, ValueType> {
  * class. It is supposed to serve as the base ValuePageElementCurrently class throughout your project.
  */
 export abstract class ValuePageElementCurrently<
-  Store extends PageElementStore,
+  Store extends PageNodeStore,
   PageElementType extends ValuePageElement<Store, ValueType>,
   ValueType
 > extends PageElementCurrently<Store, PageElementType>
@@ -93,7 +93,7 @@ implements core.elements.ValuePageElementCurrently<Store, PageElementType, Value
  * class. It is supposed to serve as the base ValuePageElementWait class throughout your project.
  */
 export class ValuePageElementWait<
-  Store extends PageElementStore,
+  Store extends PageNodeStore,
   PageElementType extends ValuePageElement<Store, ValueType>,
   ValueType
 > extends PageElementWait<Store, PageElementType>
@@ -111,7 +111,7 @@ implements core.elements.ValuePageElementWait<Store, PageElementType, ValueType>
  * class. It is supposed to serve as the base ValuePageElementEventually class throughout your project.
  */
 export class ValuePageElementEventually<
-  Store extends PageElementStore,
+  Store extends PageNodeStore,
   PageElementType extends ValuePageElement<Store, ValueType>,
   ValueType
 > extends PageElementEventually<Store, PageElementType>

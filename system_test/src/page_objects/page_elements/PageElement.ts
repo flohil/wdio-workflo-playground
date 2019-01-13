@@ -1,20 +1,20 @@
 import { pageObjects as core } from 'wdio-workflo'
 
-import { PageElementStore } from '../stores'
+import { PageNodeStore } from '../stores'
 
 /**
  * This interface can be used to extend wdio-workflo's IPageElementOpts interface.
  * It is supposed to serve as the base IPageElementOpts interface throughout your project.
  */
 export interface IPageElementOpts<
-  Store extends PageElementStore
+  Store extends PageNodeStore
 > extends core.elements.IPageElementOpts<Store> {}
 
 /**
  * This class can be used to extend or customize the functionality provided by wdio-workflo's PageElement class.
  * It is supposed to serve as the base PageElement class throughout your project.
  */
-export class PageElement<Store extends PageElementStore> extends core.elements.PageElement<Store> {
+export class PageElement<Store extends PageNodeStore> extends core.elements.PageElement<Store> {
 
   readonly currently: PageElementCurrently<Store, this>
   readonly wait: PageElementWait<Store, this>
@@ -45,7 +45,7 @@ export class PageElement<Store extends PageElementStore> extends core.elements.P
  * class. It is supposed to serve as the base PageElementCurrently class throughout your project.
  */
 export class PageElementCurrently<
-  Store extends PageElementStore,
+  Store extends PageNodeStore,
   PageElementType extends PageElement<Store>
 > extends core.elements.PageElementCurrently<Store, PageElementType> {
   printBooleanStr() {
@@ -73,7 +73,7 @@ export class PageElementCurrently<
  * class. It is supposed to serve as the base PageElementWait class throughout your project.
  */
 export class PageElementWait<
-  Store extends PageElementStore,
+  Store extends PageNodeStore,
   PageElementType extends PageElement<Store>
 > extends core.elements.PageElementWait<Store, PageElementType> {}
 
@@ -82,6 +82,6 @@ export class PageElementWait<
  * class. It is supposed to serve as the base PageElementEventually class throughout your project.
  */
 export class PageElementEventually<
-  Store extends PageElementStore,
+  Store extends PageNodeStore,
   PageElementType extends PageElement<Store>
 > extends core.elements.PageElementEventually<Store, PageElementType> {}
