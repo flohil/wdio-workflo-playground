@@ -1,15 +1,10 @@
 {
-  "name": "wdio-workflo-example",
-  "version": "0.0.6",
-  "description": "An example project for wdio-workflo",
-  "scripts": {
-    "devTest": "cd node_modules/wdio-workflo && npm run-script devTest",
-    "test": "cd node_modules/wdio-workflo && npm run-script test",
-    "report": "cd node_modules/wdio-workflo && npm run-script latest_report"
-  },
+  "name": "wdio-workflo-playground",
+  "version": "0.0.7",
+  "description": "A repository to play around with wdio-workflo during its development",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/flohil/wdio-workflo-example.git"
+    "url": "git+https://github.com/flohil/wdio-workflo-playground.git"
   },
   "keywords": [
     "wdio-workflo"
@@ -17,10 +12,10 @@
   "author": "Florian Hilbinger <florian.hilbinger@hotmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/flohil/wdio-workflo-example/issues"
+    "url": "https://github.com/flohil/wdio-workflo-playground/issues"
   },
-  "homepage": "https://github.com/flohil/wdio-workflo-example#readme",
+  "homepage": "https://github.com/flohil/wdio-workflo-playground#readme",
   "devDependencies": {
-    "wdio-workflo": "^0.2.34"
+    "wdio-workflo": "^0.2.37"
   }
 }
