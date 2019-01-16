@@ -11,10 +11,10 @@ const workfloConfig: IWorkfloConfig = {
     browserName: 'chrome'
   },
   timeouts: {
-    default: 800
+    default: 5000
   },
   intervals: {
-    default: 400
+    default: 500
   },
   allure: {
     issueTrackerPattern: 'http://example.com/issues/%s',

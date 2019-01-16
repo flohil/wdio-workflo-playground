@@ -1,28 +1,28 @@
 {
-  "extends": "./tsconfig.workflo.json",
-  "compilerOptions": {
-      "noImplicitAny": false,
-      "sourceMap": true,
-      "allowJs": true,
-      "outDir": "./tsOut",
-      "baseUrl": ".",
-      "paths": {
-          "~/*": ["./*"],
-          "?/*": ["./system_test/src/*"],
-          "$/*": ["./src/styles/*"],
-          "@/*": ["./src/app/*"],
-          "test.data/*": ["./system_test/data/*"],
-          "app/*": ["./src/app/*"],
-          "app.styles/*": ["./src/styles/*"],
-          "app.config/*": ["./config/*"],
-          "app.components/*": ["./src/app/components/*"],
-          "app.dteditor/*": ["./src/dteditor/dist/*"],
-          "app.pages/*": ["./src/app/pages/*"],
-          "test.unit/*": ["./test/spec/unit_tests/*"],
-          "test.integration/*": ["./test/spec/integration_tests/*"],
-          "test.system/*": ["./system_test/src/*"],
-          "test.page_objects/*": ["./system_test/src/page_objects/*"],
-          "test.json_table_data/*": ["./system_test/src/fixtures/json_table_data/*"]
-      }
-  }
+    "extends": "./tsconfig.workflo.json",
+    "compilerOptions": {
+        "noImplicitAny": false,
+        "sourceMap": true,
+        "allowJs": true,
+        "outDir": "./tsOut",
+        "baseUrl": ".",
+        "paths": {
+            "~/*": ["./*"],
+            "?/*": ["./system_test/src/*"],
+            "$/*": ["./src/styles/*"],
+            "@/*": ["./src/app/*"],
+            "test.data/*": ["./system_test/data/*"],
+            "app/*": ["./src/app/*"],
+            "app.styles/*": ["./src/styles/*"],
+            "app.config/*": ["./config/*"],
+            "app.components/*": ["./src/app/components/*"],
+            "app.dteditor/*": ["./src/dteditor/dist/*"],
+            "app.pages/*": ["./src/app/pages/*"],
+            "test.unit/*": ["./test/spec/unit_tests/*"],
+            "test.integration/*": ["./test/spec/integration_tests/*"],
+            "test.system/*": ["./system_test/src/*"],
+            "test.page_objects/*": ["./system_test/src/page_objects/*"],
+            "test.json_table_data/*": ["./system_test/src/fixtures/json_table_data/*"]
+        }
+    }
 }

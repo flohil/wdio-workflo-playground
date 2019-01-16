@@ -11,8 +11,16 @@ export class HerukoAppPage extends BasePage<stores.DemoStore> {
     super({...args, basePath: '', store: stores.demo})
   }
 
+  get container() {
+    return this._store.Element(xpath('//div').id('content'))
+  }
+
+  isOpen(opts: {path?: string} = {}): boolean {
+    return this.container.currently.isVisible()
+  }
+
   // opens a page at the given url path and waits for it to load
-  open(opts: {path?: string} = {}) {
+  open(opts: {path?: string, timeout?: number} = {}) {
     if (typeof opts.path !== 'undefined') {
       opts.path = `${opts.path}`
     } else {
@@ -22,6 +30,6 @@ export class HerukoAppPage extends BasePage<stores.DemoStore> {
 
     browser.url(fullPath)
 
-    this.wait.isOpen({path: opts.path})
+    this.wait.isOpen(opts)
   }
 }

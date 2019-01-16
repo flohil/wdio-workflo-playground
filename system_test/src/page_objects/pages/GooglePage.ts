@@ -186,4 +186,8 @@ export class GooglePage extends BasePage<stores.DemoStore> {
       }
     })
   }
+
+  isOpen() {
+    return this.input.currently.isVisible()
+  }
 }

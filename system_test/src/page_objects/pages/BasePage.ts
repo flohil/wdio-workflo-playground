@@ -24,14 +24,14 @@ export class BasePage<
     return this._store.Element(`//body`)
   }
 
-  isOpen(opts: {path?: string}): boolean {
+  isOpen(opts: {path?: string} = {}): boolean {
     const matchPath = (opts.path) ? opts.path : this.basePath
     const pageBasePath = browser.getUrl().split('/')[3]
 
     return pageBasePath === matchPath && this.container.currently.isVisible()
   }
 
-  isClosed(opts: {path?: string}): boolean {
+  isClosed(opts: {path?: string} = {}): boolean {
     return !this.isOpen(opts)
   }
 

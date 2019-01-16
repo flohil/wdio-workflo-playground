@@ -1,6 +1,6 @@
 {
   "name": "wdio-workflo-playground",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "A repository to play around with wdio-workflo during its development",
   "repository": {
     "type": "git",
@@ -16,6 +16,6 @@
   },
   "homepage": "https://github.com/flohil/wdio-workflo-playground#readme",
   "devDependencies": {
-    "wdio-workflo": "^0.2.38"
+    "wdio-workflo": "^0.2.41"
   }
 }
