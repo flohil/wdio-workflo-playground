@@ -16,6 +16,6 @@
   },
   "homepage": "https://github.com/flohil/wdio-workflo-playground#readme",
   "devDependencies": {
-    "wdio-workflo": "^0.2.41"
+    "wdio-workflo": "^0.2.44"
   }
 }
