@@ -75,7 +75,7 @@ suite("Matchers", {}, () => {
 
   testcase("enabled", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"2.1": [1]}, () => {
           pages.demo.dynamicControls.searchInput.wait.not.isEnabled()
@@ -104,7 +104,7 @@ suite("Matchers", {}, () => {
 
   testcase("selected", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"2.1": [1]}, () => {
           pages.demo.dynamicControls.searchInput.wait.not.isEnabled()
@@ -133,7 +133,7 @@ suite("Matchers", {}, () => {
 
   testcase("checked", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'checkboxes'},
+      args: {path: 'checkboxes'},
       cb: () => {
         validate({"2.1": [1]}, () => {
 
@@ -155,7 +155,7 @@ suite("Matchers", {}, () => {
 
   testcase("text", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"2.1": [1]}, () => {
           const paragraph = pages.demo.dynamicControls.paragraph
@@ -191,7 +191,7 @@ suite("Matchers", {}, () => {
 
   testcase("value", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'login'},
+      args: {path: 'login'},
       cb: () => {
         validate({"2.1": [1]}, () => {
           const input = pages.demo.login.usernameByName
@@ -231,7 +231,7 @@ suite("Matchers", {}, () => {
   testcase("html", {}, () => {
     console.log("start testcase")
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"2.1": [1]}, () => {
           const footer = pages.demo.dynamicControls.footer
@@ -278,7 +278,7 @@ suite("Matchers", {}, () => {
 
   testcase("direct text", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"2.1": [1]}, () => {
           const poweredBy = pages.demo.dynamicControls.poweredBy
@@ -318,7 +318,7 @@ suite("Matchers", {}, () => {
 
   testcase("attribute", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"2.1": [1]}, () => {
           const button = pages.demo.dynamicControls.enableButton
@@ -358,7 +358,7 @@ suite("Matchers", {}, () => {
 
   testcase("class", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"2.1": [1]}, () => {
           const footer = pages.demo.dynamicControls.footer
@@ -398,7 +398,7 @@ suite("Matchers", {}, () => {
 
   testcase("id", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'login'},
+      args: {path: 'login'},
       cb: () => {
         validate({"2.1": [1]}, () => {
           const input = pages.demo.login.usernameByName
@@ -430,7 +430,7 @@ suite("Matchers", {}, () => {
       }
     }))
     .when(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"2.1": [1]}, () => {
           const input = pages.demo.dynamicControls.searchInput
@@ -445,7 +445,7 @@ suite("Matchers", {}, () => {
 
   testcase("name", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'login'},
+      args: {path: 'login'},
       cb: () => {
         validate({"2.1": [1]}, () => {
           const input = pages.demo.login.usernameById
@@ -477,7 +477,7 @@ suite("Matchers", {}, () => {
       }
     }))
     .when(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"2.1": [1]}, () => {
           const input = pages.demo.dynamicControls.searchInput

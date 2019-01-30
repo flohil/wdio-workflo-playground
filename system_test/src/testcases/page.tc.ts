@@ -4,7 +4,7 @@ import { pages } from '?/page_objects'
 suite("Page Suite", {}, () => {
   testcase("page isOpen", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"1.2": [1]}, () => {
           expect(pages.demo.dynamicControlsOpen.eventually.isOpen()).toBe(false)

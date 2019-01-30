@@ -51,7 +51,7 @@ suite("Matchers", {}, () => {
 suite("TSuite", {}, () => {
   testcase("arrows", {}, () => {
     given(steps["open url %{url}"]({
-      arg: {url: '/'}
+      args: {url: '/'}
     }))
     .when(steps["successful step"]({
       cb: () => {
@@ -74,7 +74,7 @@ suite("TSuite", {}, () => {
   })
   testcase("multiple", {}, () => {
     given(steps["open url %{url}"]({
-      arg: {url: '/'},
+      args: {url: '/'},
       cb: () => {
         validate({"2.1": [1]}, () => {
           expect(1).toBe(2)
@@ -102,7 +102,7 @@ suite("TSuite", {}, () => {
   })
   testcase("not implemented", {}, () => {
     given(steps["open url %{url} asdf"]({
-      arg: {url: '/'},
+      args: {url: '/'},
       cb: () => {
         validate({"1.1": [1]}, () => {
           expect(1).toBe(2)
@@ -112,7 +112,7 @@ suite("TSuite", {}, () => {
   })
   testcase("passing", {}, () => {
     given(steps["open url %{url}"]({
-      arg: {url: '/'},
+      args: {url: '/'},
       cb: () => {
         validate({"2.2": [1]}, () => {
           expect(1).toBe(1)
@@ -122,7 +122,7 @@ suite("TSuite", {}, () => {
   })
   testcase("broken", {}, () => {
     given(steps["open url %{url}"]({
-      arg: {url: '/'},
+      args: {url: '/'},
       cb: () => {
         browser.getText('//div[@id="asdf"]')
 
@@ -134,7 +134,7 @@ suite("TSuite", {}, () => {
   })
   testcase("failed", {}, () => {
     given(steps["open url %{url}"]({
-      arg: {url: '/'},
+      args: {url: '/'},
       cb: () => {
         validate({"1.2": [1, 2]}, () => {
           expect(1).toBe(2)
@@ -144,7 +144,7 @@ suite("TSuite", {}, () => {
   })
   testcase("broken in validate", {}, () => {
     given(steps["open url %{url}"]({
-      arg: {url: '/'},
+      args: {url: '/'},
       cb: () => {
         validate({"1.2": [2]}, () => {
           browser.getText('//div[@id="asdf"]')
@@ -155,7 +155,7 @@ suite("TSuite", {}, () => {
   })
   testcase("typeerror", {}, () => {
     given(steps["open url %{url}"]({
-      arg: {url: '/'},
+      args: {url: '/'},
       cb: () => {
         this.something.getInfo()
 
@@ -167,7 +167,7 @@ suite("TSuite", {}, () => {
   })
   testcase("typeerror broken", {}, () => {
     given(steps["open url %{url}"]({
-      arg: {url: '/'},
+      args: {url: '/'},
       cb: () => {
 
         validate({"1.2": [2]}, () => {
@@ -180,7 +180,7 @@ suite("TSuite", {}, () => {
   })
   testcase("waituntil", {}, () => {
     given(steps["open url %{url}"]({
-      arg: {url: '/'},
+      args: {url: '/'},
       cb: () => {
         browser.waitUntil(() => {
           return browser.getText('//body') === "jodel"
@@ -262,7 +262,7 @@ suite("Homepage Suite", {}, () => {
   testcase("google something", {bugs: ['KBCPP-55']}, () => {
     given(steps["open homepage"]())
     .when(steps["google %{term}"]({
-      arg: {term: "Webdriverio"},
+      args: {term: "Webdriverio"},
       cb: () => {
         browser.debug()
       }
@@ -271,7 +271,7 @@ suite("Homepage Suite", {}, () => {
   testcase("wait", {bugs: ['KBCPP-66']}, () => {
     given(steps["open homepage"]())
     .when(steps["google %{term}"]({
-      arg: {term: "Webdriverio"},
+      args: {term: "Webdriverio"},
       cb: () => {
         pages.google.container.wait.not.isVisible()
 
@@ -323,7 +323,7 @@ suite("Failed Suite", {}, () => {
   testcase("wait", {bugs: ['KBCPP-66']}, () => {
     given(steps["open homepage"]())
     .when(steps["google %{term}"]({
-      arg: {term: "Webdriverio"},
+      args: {term: "Webdriverio"},
       cb: () => {
         pages.google.container.wait.not.isVisible()
         validate({"1.2": [1]}, () => {
@@ -345,7 +345,7 @@ suite("Failed Suite", {}, () => {
   testcase("wait 2", {bugs: ['KBCPP-66']}, () => {
     given(steps["open homepage"]())
     .when(steps["google %{term}"]({
-      arg: {term: "Webdriverio"},
+      args: {term: "Webdriverio"},
       cb: () => {
         pages.google.container.wait.not.isVisible()
         validate({"1.2": [1]}, () => {

@@ -5,7 +5,7 @@ import { pageObjects } from 'wdio-workflo'
 suite("FilterMask Suite", {}, () => {
   testcase("list get", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"1.2": [1]}, () => {
           console.log("no filterMask list", pages.demo.dynamicControls.buttonList.getText())
@@ -22,7 +22,7 @@ suite("FilterMask Suite", {}, () => {
 
   testcase("map get", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"1.2": [1]}, () => {
           console.log("no filterMask map", pages.demo.dynamicControls.buttonMap.getText())
@@ -50,7 +50,7 @@ suite("FilterMask Suite", {}, () => {
 
   testcase("group get", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"1.2": [1]}, () => {
           console.log("no filterMask group", pages.demo.dynamicControls.buttonGroup.getText())
@@ -104,7 +104,7 @@ suite("FilterMask Suite", {}, () => {
 
   testcase("list has", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"1.2": [1]}, () => {
           console.log("no filterMask list", pages.demo.dynamicControls.buttonList.getHasAnyText())
@@ -121,7 +121,7 @@ suite("FilterMask Suite", {}, () => {
 
   testcase("map has", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"1.2": [1]}, () => {
           console.log("no filterMask map", pages.demo.dynamicControls.buttonMap.getHasAnyText())
@@ -149,7 +149,7 @@ suite("FilterMask Suite", {}, () => {
 
   testcase("group has", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"1.2": [1]}, () => {
           console.log("no filterMask group", pages.demo.dynamicControls.buttonGroup.getHasAnyText())
@@ -203,7 +203,7 @@ suite("FilterMask Suite", {}, () => {
 
   testcase("list wait", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"1.2": [1]}, () => {
           expect(() => pages.demo.dynamicControls.buttonList.wait.not.hasAnyText({
@@ -233,7 +233,7 @@ suite("FilterMask Suite", {}, () => {
 
   testcase("map wait", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"1.2": [1]}, () => {
           expect(() => pages.demo.dynamicControls.buttonMap.wait.not.hasAnyText({
@@ -272,7 +272,7 @@ suite("FilterMask Suite", {}, () => {
 
   testcase("group wait", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"1.2": [1]}, () => {
           expect(() => pages.demo.dynamicControls.buttonGroup.wait.not.hasAnyText({
@@ -326,7 +326,7 @@ suite("FilterMask Suite", {}, () => {
 
   testcase("list do", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"1.2": [1]}, () => {
           const texts: string[] = []
@@ -349,7 +349,7 @@ suite("FilterMask Suite", {}, () => {
 
   testcase("map do", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"1.2": [1]}, () => {
           const texts: string[] = []
@@ -373,7 +373,7 @@ suite("FilterMask Suite", {}, () => {
 
   testcase("group do", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"1.2": [1]}, () => {
           const buttonGroup = pages.demo.dynamicControls.buttonGroup

@@ -37,7 +37,7 @@ suite("Selector", {}, () => {
   })
   testcase("test (not) checked", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'checkboxes'},
+      args: {path: 'checkboxes'},
       cb: () => {
         validate({"2.1": [1]}, () => {
           const firstCheckbox = pages.demo.checkboxes.checkboxes.where.notChecked().getFirst()
@@ -68,7 +68,7 @@ suite("Selector", {}, () => {
 
   testcase("test (not) disabled", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"2.1": [1]}, () => {
           const disabledInput = pages.demo.dynamicControls.inputList.where.disabled().getFirst()
@@ -86,7 +86,7 @@ suite("Selector", {}, () => {
 
   testcase("test (not) selected", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dropdown'},
+      args: {path: 'dropdown'},
       cb: () => {
         validate({"2.1": [1]}, () => {
           const selectedOption = pages.demo.dropdown.dropdown.optionsList.where.selected().getFirst()
@@ -103,7 +103,7 @@ suite("Selector", {}, () => {
 
   testcase("test not text", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"2.1": [1]}, () => {
           const text = pages.demo.dynamicControls.paragraphList.where.text(textStr).getFirst()
@@ -128,7 +128,7 @@ suite("Selector", {}, () => {
 
   testcase("test not attribute", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"2.1": [1]}, () => {
           const inputList = pages.demo.dynamicControls.inputList

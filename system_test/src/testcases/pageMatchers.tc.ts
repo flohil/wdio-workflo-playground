@@ -4,7 +4,7 @@ import { pages, stores, elements } from '?/page_objects'
 suite("Page Matchers", {}, () => {
   testcase("toBeOpen", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"1.2": [1]}, () => {
           expectPage(pages.demo.dynamicControls).toBeOpen()
@@ -19,7 +19,7 @@ suite("Page Matchers", {}, () => {
 
   testcase("toBeClosed", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"1.2": [1]}, () => {
           expectPage(pages.google).toBeClosed()
@@ -34,7 +34,7 @@ suite("Page Matchers", {}, () => {
 
   testcase("toEventuallyBeOpen", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"1.2": [1]}, () => {
           expectPage(pages.demo.dynamicControls).toEventuallyBeOpen()
@@ -49,7 +49,7 @@ suite("Page Matchers", {}, () => {
 
   testcase("toEventuallyBeClosed", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"1.2": [1]}, () => {
           expectPage(pages.google).toEventuallyBeClosed()

@@ -4,7 +4,7 @@ import { pages, stores, elements } from '?/page_objects'
 suite("New Matchers", {}, () => {
   // testcase("check after click", {}, () => {
   //   given(steps["open demopage %{path}"]({
-  //     arg: {path: 'dynamic_controls'},
+  //     args: {path: 'dynamic_controls'},
   //     cb: () => {
   //       validate({"1.2": [1]}, () => {
 
@@ -51,7 +51,7 @@ suite("New Matchers", {}, () => {
 
   // testcase("getLength and isEmpty", {}, () => {
   //   given(steps["open demopage %{path}"]({
-  //     arg: {path: 'dynamic_controls'},
+  //     args: {path: 'dynamic_controls'},
   //     cb: () => {
   //       validate({"1.2": [1]}, () => {
 
@@ -76,7 +76,7 @@ suite("New Matchers", {}, () => {
 
   testcase("toExist", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"1.2": [1]}, () => {
           expectElement(pages.demo.dynamicControls.removeButton).not.toExist()
@@ -121,7 +121,7 @@ suite("New Matchers", {}, () => {
 
   testcase("toEventuallyExist", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"1.2": [1]}, () => {
           expectElement(pages.demo.dynamicControls.removeButton).not.toEventuallyExist({timeout: 500})
@@ -166,7 +166,7 @@ suite("New Matchers", {}, () => {
 
   testcase("toBeVisible", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"1.2": [1]}, () => {
 
@@ -189,7 +189,7 @@ suite("New Matchers", {}, () => {
 
   testcase("toBeSelected", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dropdown'},
+      args: {path: 'dropdown'},
       cb: () => {
         validate({"1.2": [1]}, () => {
           expectElement(pages.demo.dropdown.defaultOption).toBeSelected()
@@ -206,7 +206,7 @@ suite("New Matchers", {}, () => {
 
   testcase("toBeChecked", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"1.2": [1]}, () => {
           expectElement(pages.demo.dynamicControls.checkbox).toBeChecked()
@@ -233,7 +233,7 @@ suite("New Matchers", {}, () => {
 
   testcase("toHaveHTML", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"1.2": [1]}, () => {
           const fullHTML = '<input type="checkbox" label="blah"> A checkbox'
@@ -254,7 +254,7 @@ suite("New Matchers", {}, () => {
 
   testcase("toHaveAnyHTML", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"1.2": [1]}, () => {
           expectElement(pages.demo.dynamicControls.checkboxContainer).toHaveAnyHTML()
@@ -273,7 +273,7 @@ suite("New Matchers", {}, () => {
 
   testcase("toContainHTML", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"1.2": [1]}, () => {
           const partialHTML = '<input type="checkbox" label="blah">'
@@ -294,7 +294,7 @@ suite("New Matchers", {}, () => {
 
   testcase("toHaveText", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"1.2": [1]}, () => {
 
@@ -329,7 +329,7 @@ suite("New Matchers", {}, () => {
 
   testcase("toEventuallyHaveText", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"1.2": [1]}, () => {
           expectList(pages.demo.dynamicControls.buttonList).toEventuallyHaveText(['asdf', 'asdf'])
@@ -387,7 +387,7 @@ suite("New Matchers", {}, () => {
 
   testcase("toHaveAnyText", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"1.2": [1]}, () => {
           expectElement(pages.demo.dynamicControls.removeButton).toHaveAnyText()
@@ -452,7 +452,7 @@ suite("New Matchers", {}, () => {
 
   testcase("toEventuallyHaveAnyText", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"1.2": [1]}, () => {
           expectElement(pages.demo.dynamicControls.removeButton).toEventuallyHaveAnyText({
@@ -547,7 +547,7 @@ suite("New Matchers", {}, () => {
 
   testcase("toContainText", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"1.2": [1]}, () => {
           expectElement(pages.demo.dynamicControls.removeButton).not.toContainText('move')
@@ -599,7 +599,7 @@ suite("New Matchers", {}, () => {
 
   testcase("toEventuallyContainText", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"1.2": [1]}, () => {
           expectElement(pages.demo.dynamicControls.removeButton).not.toEventuallyContainText('mov')
@@ -650,7 +650,7 @@ suite("New Matchers", {}, () => {
 
   testcase("toHaveDirectText", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"1.2": [1]}, () => {
           expectElement(pages.demo.dynamicControls.removeButton).not.toHaveDirectText('Remove')
@@ -675,7 +675,7 @@ suite("New Matchers", {}, () => {
 
   testcase("toEventuallyHaveDirectText", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"1.2": [1]}, () => {
           expectElement(pages.demo.dynamicControls.removeButton).not.toEventuallyHaveDirectText('Remove')
@@ -700,7 +700,7 @@ suite("New Matchers", {}, () => {
 
   testcase("toHaveAnyDirectText", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"1.2": [1]}, () => {
           expectElement(pages.demo.dynamicControls.removeButton).not.toHaveAnyDirectText()
@@ -722,7 +722,7 @@ suite("New Matchers", {}, () => {
 
   testcase("toEventuallyHaveAnyDirectText", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"1.2": [1]}, () => {
           expectElement(pages.demo.dynamicControls.removeButton).not.toEventuallyHaveAnyDirectText({
@@ -758,7 +758,7 @@ suite("New Matchers", {}, () => {
 
   testcase("toContainDirectText", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"1.2": [1]}, () => {
           expectElement(pages.demo.dynamicControls.removeButton).not.toContainDirectText('move')
@@ -783,7 +783,7 @@ suite("New Matchers", {}, () => {
 
   testcase("toEventuallyContainDirectText", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"1.2": [1]}, () => {
           expectElement(pages.demo.dynamicControls.removeButton).not.toEventuallyContainDirectText('mov')
@@ -808,7 +808,7 @@ suite("New Matchers", {}, () => {
 
   testcase("toHaveAttribute", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"1.2": [1]}, () => {
           const attribute: Workflo.IAttribute = {
@@ -846,7 +846,7 @@ suite("New Matchers", {}, () => {
 
   testcase("toHaveAnyAttribute", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"1.2": [1]}, () => {
           expectElement(pages.demo.dynamicControls.checkbox).toHaveAnyAttribute('label')
@@ -869,7 +869,7 @@ suite("New Matchers", {}, () => {
 
   testcase("toContainAttribute", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"1.2": [1]}, () => {
           const partialAttribute: Workflo.IAttribute = {
@@ -905,7 +905,7 @@ suite("New Matchers", {}, () => {
 
   testcase("toHaveClass", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"1.2": [1]}, () => {
           expectElement(pages.demo.dynamicControls.footer).toHaveClass('row')
@@ -934,7 +934,7 @@ suite("New Matchers", {}, () => {
 
   testcase("toHaveAnyClass", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"1.2": [1]}, () => {
           expectElement(pages.demo.dynamicControls.checkboxContainer).toHaveAnyClass()
@@ -953,7 +953,7 @@ suite("New Matchers", {}, () => {
 
   testcase("toContainClass", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"1.2": [1]}, () => {
           expectElement(pages.demo.dynamicControls.footer).toContainClass('ro')
@@ -982,7 +982,7 @@ suite("New Matchers", {}, () => {
 
   testcase("toHaveId", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"1.2": [1]}, () => {
           expectElement(pages.demo.dynamicControls.footer).toHaveId('page-footer')
@@ -1011,7 +1011,7 @@ suite("New Matchers", {}, () => {
 
   testcase("toHaveAnyId", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"1.2": [1]}, () => {
           expectElement(pages.demo.dynamicControls.checkbox).toHaveAnyId()
@@ -1030,7 +1030,7 @@ suite("New Matchers", {}, () => {
 
   testcase("toContainId", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"1.2": [1]}, () => {
           expectElement(pages.demo.dynamicControls.footer).toContainId('page-foote')
@@ -1059,7 +1059,7 @@ suite("New Matchers", {}, () => {
 
   testcase("toHaveName", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'login'},
+      args: {path: 'login'},
       cb: () => {
         validate({"1.2": [1]}, () => {
           expectElement(pages.demo.login.usernameById).toHaveName('username')
@@ -1088,7 +1088,7 @@ suite("New Matchers", {}, () => {
 
   testcase("toHaveAnyName", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'login'},
+      args: {path: 'login'},
       cb: () => {
         validate({"1.2": [1]}, () => {
           expectElement(pages.demo.login.usernameById).toHaveAnyName()
@@ -1107,7 +1107,7 @@ suite("New Matchers", {}, () => {
 
   testcase("toContainName", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'login'},
+      args: {path: 'login'},
       cb: () => {
         validate({"1.2": [1]}, () => {
           expectElement(pages.demo.login.usernameById).toContainName('ser')
@@ -1136,7 +1136,7 @@ suite("New Matchers", {}, () => {
 
   testcase("toHaveLocation", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'login'},
+      args: {path: 'login'},
       cb: () => {
         validate({"1.2": [1]}, () => {
 
@@ -1206,7 +1206,7 @@ suite("New Matchers", {}, () => {
 
   testcase("toHaveX", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'login'},
+      args: {path: 'login'},
       cb: () => {
         validate({"1.2": [1]}, () => {
 
@@ -1245,7 +1245,7 @@ suite("New Matchers", {}, () => {
 
   testcase("toHaveY", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'login'},
+      args: {path: 'login'},
       cb: () => {
         validate({"1.2": [1]}, () => {
 
@@ -1283,7 +1283,7 @@ suite("New Matchers", {}, () => {
 
   testcase("toHaveSize", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'login'},
+      args: {path: 'login'},
       cb: () => {
         validate({"2.1": [1]}, () => {
 
@@ -1353,7 +1353,7 @@ suite("New Matchers", {}, () => {
 
   testcase("toHaveWidth", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'login'},
+      args: {path: 'login'},
       cb: () => {
         validate({"1.2": [1]}, () => {
 
@@ -1392,7 +1392,7 @@ suite("New Matchers", {}, () => {
 
   testcase("toHaveHeight", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'login'},
+      args: {path: 'login'},
       cb: () => {
         validate({"1.2": [1]}, () => {
 
@@ -1431,7 +1431,7 @@ suite("New Matchers", {}, () => {
 
   testcase("toHaveValue", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"1.2": [1]}, () => {
           expectElement(pages.demo.dynamicControls.searchInput).toHaveValue('asdf')
@@ -1491,7 +1491,7 @@ suite("New Matchers", {}, () => {
 
   testcase("toEventuallyHaveValue", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"1.2": [1]}, () => {
           expectElement(pages.demo.dynamicControls.searchInput).toEventuallyHaveValue('asdf', {
@@ -1546,7 +1546,7 @@ suite("New Matchers", {}, () => {
 
   testcase("toHaveAnyValue", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"1.2": [1]}, () => {
           expectElement(pages.demo.dynamicControls.searchInput).toHaveAnyValue()
@@ -1614,7 +1614,7 @@ suite("New Matchers", {}, () => {
 
   testcase("toEventuallyHaveAnyValue", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"1.2": [1]}, () => {
           expectElement(pages.demo.dynamicControls.searchInput).toEventuallyHaveAnyValue({
@@ -1728,7 +1728,7 @@ suite("New Matchers", {}, () => {
 
   testcase("toContainValue", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"1.2": [1]}, () => {
           expectElement(pages.demo.dynamicControls.searchInput).toContainValue('asdf')
@@ -1788,7 +1788,7 @@ suite("New Matchers", {}, () => {
 
   testcase("toEventuallyContainValue", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"1.2": [1]}, () => {
           expectElement(pages.demo.dynamicControls.searchInput).toEventuallyContainValue('asdf', {
@@ -1843,7 +1843,7 @@ suite("New Matchers", {}, () => {
 
   testcase("toBeEmpty", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"1.2": [1]}, () => {
           expectList(pages.demo.dynamicControls.buttonList).toBeEmpty()
@@ -1857,7 +1857,7 @@ suite("New Matchers", {}, () => {
 
   testcase("toEventuallyBeEmpty", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"1.2": [1]}, () => {
           expectList(pages.demo.dynamicControls.buttonList).toEventuallyBeEmpty({
@@ -1875,7 +1875,7 @@ suite("New Matchers", {}, () => {
 
   testcase("toHaveLength", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"1.2": [1]}, () => {
           expectList(pages.demo.dynamicControls.buttonList).toHaveLength(2)
@@ -1896,7 +1896,7 @@ suite("New Matchers", {}, () => {
 
   testcase("toEventuallyHaveLength", {}, () => {
     given(steps["open demopage %{path}"]({
-      arg: {path: 'dynamic_controls'},
+      args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"1.2": [1]}, () => {
           expectList(pages.demo.dynamicControls.buttonList).toEventuallyHaveLength(2)
