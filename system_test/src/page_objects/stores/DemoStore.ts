@@ -29,7 +29,7 @@ export class DemoStore extends PageNodeStore {
         IDemoInputOpts<this>,
         string
       >,
-      "waitType" | "timeout" | "disableCache" | "identifier",
+      "timeout" | "disableCache" | "identifier",
       "elementOpts"
     >
   ) {
@@ -95,7 +95,7 @@ export class DemoStore extends PageNodeStore {
     selector: Workflo.XPath,
     options?: Workflo.PickPartial<
       core.elements.IPageElementListOpts<this, Checkbox<this>, CheckboxOpts<this>>,
-      "waitType" | "timeout" | "disableCache" | "identifier",
+      "timeout" | "disableCache" | "identifier",
       "elementOpts"
     >
   ) {

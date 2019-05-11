@@ -90,7 +90,6 @@ export class PageNodeStore extends core.stores.PageNodeStore {
       {
         elementOpts: {},
         elementStoreFunc: this.ExistElement,
-        waitType: Workflo.WaitType.exist,
         ...options
       }
     )
