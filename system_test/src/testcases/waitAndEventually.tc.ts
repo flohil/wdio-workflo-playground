@@ -30,7 +30,8 @@ suite("Wait and Eventually", {}, () => {
     given(steps["open homepage"]({
       cb: () => {
         validate({"2.1": [1]}, () => {
-          // pages.google.divList.wait.none.exists() double error message line
+
+          pages.google.divList.wait.none.exists()
           pages.google.divList.wait.any.exists()
           pages.google.divList.wait.hasLength(1, {comparator: Workflo.Comparator.gt})
 
@@ -56,6 +57,10 @@ suite("Wait and Eventually", {}, () => {
           expect(
             pages.google.divList.eventually.hasLength(1, {comparator: Workflo.Comparator.gt})
           ).toBe(true)
+
+          expect(pages.google.divList.currently.any.hasId('quacksi')).toBe(true)
+
+          expect(pages.google.divList.currently.none.hasId('viewport')).toBe(true)
         })
       }
     }))
