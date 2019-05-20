@@ -96,7 +96,7 @@ export class DynamicControlsPage extends HerukoAppPage {
       get buttonMap() {
         return page.buttonMap
       }
-    }, {timeout: 5000})
+    })
   }
 
   get superGroup() {
