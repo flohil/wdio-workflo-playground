@@ -17,8 +17,8 @@ export interface IPageOpts<
  */
 export abstract class Page<
   Store extends PageNodeStore,
-  IsOpenOpts = {},
-  IsClosedOpts = IsOpenOpts
+  IsOpenOpts extends object = object,
+  IsClosedOpts extends object = IsOpenOpts
 > extends core.pages.Page<Store, IsOpenOpts, IsClosedOpts> {
 
   constructor(opts: IPageOpts<Store>) {

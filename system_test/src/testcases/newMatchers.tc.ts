@@ -169,7 +169,6 @@ suite("New Matchers", {}, () => {
       args: {path: 'dynamic_controls'},
       cb: () => {
         validate({"1.2": [1]}, () => {
-
           expectElement(pages.demo.dynamicControls.removeButton).not.toBeVisible()
           expectList(pages.demo.dynamicControls.buttonList).not.toBeVisible()
           expectMap(pages.demo.dynamicControls.buttonMap).not.toBeVisible()
